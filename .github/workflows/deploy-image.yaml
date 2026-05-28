@@ -8,6 +8,8 @@ on:
     paths:
       - dockerfiles/**
 
+concurrency: build-images
+
 jobs:
   build-images:
     runs-on: ubuntu-latest

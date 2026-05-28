@@ -8,6 +8,8 @@ on:
     paths:
       - README.md
 
+concurrency: build-images
+
 jobs:
   update-description:
     runs-on: ubuntu-latest
