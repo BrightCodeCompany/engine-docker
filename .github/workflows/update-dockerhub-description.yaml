@@ -9,7 +9,7 @@ on:
       - README.md
 
 jobs:
-  validate-yaml:
+  update-description:
     runs-on: ubuntu-latest
     environment: dockerhub
     steps:
