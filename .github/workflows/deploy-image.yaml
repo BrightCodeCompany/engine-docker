@@ -31,7 +31,7 @@ jobs:
       - name: Build images
         working-directory: dockerfiles/${{ matrix.oie_version }}
         run: |
-          docker compose --progress plain build --build-arg CREATED_AT=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          docker compose --progress plain build --build-arg CREATED_AT=$(date -u +"%Y-%m-%dT%H:%M:%SZ") --push
           docker image ls
 
       - name: Login to Docker Hub
@@ -39,8 +39,3 @@ jobs:
         with:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Push images to Docker hub
-        working-directory: dockerfiles/${{ matrix.oie_version }}
-        run: docker compose push
-
