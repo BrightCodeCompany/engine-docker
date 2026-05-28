@@ -9,6 +9,7 @@ on:
 jobs:
   build-images:
     runs-on: ubuntu-latest
+    environment: dockerhub
     strategy:
       matrix:
         oie_version:
