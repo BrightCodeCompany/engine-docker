@@ -13,10 +13,10 @@ labels: |-
   "org.opencontainers.image.created"="${CREATED_AT?:}" \
   "org.opencontainers.image.description"="An open source fork of the now closed-source Mirth Connect" \
   "org.opencontainers.image.licenses"="MPL-2.0" \
-  "org.opencontainers.image.source"="https://github.com/OpenIntegrationEngine/engine-docker" \
+  "org.opencontainers.image.source"="https://github.com/brightcodecompany/engine-docker" \
   "org.opencontainers.image.title"="Open Integration Engine" \
   "org.opencontainers.image.url"="https://github.com/OpenIntegrationEngine/engine" \
-  "org.opencontainers.image.vendor"="The Open Integration Engine Project" \
+  "org.opencontainers.image.vendor"="BrightCodeCompany OÜ" \
   "org.opencontainers.image.version"="{{ .slug }}"
 
 versions:

@@ -23,23 +23,22 @@ name: open-integration-engine
 services:
   {{- range .version.tags }}
     {{ print .distro "-" .type ":" }}
-      image: openintegrationengine/engine
+      image: brightcodecompany/openintegrationengine
       build:
-        dockerfile: dockerfiles/{{ $slug }}/Dockerfile
         target: {{ .distro }}-{{ .type }}
-        context: ../../
+        context: .
         platforms:
           - linux/amd64
-    #      - linux/arm64
+          - linux/arm64
         tags:
-          - openintegrationengine/engine:{{ $slug }}-{{ .distro }}
-          - openintegrationengine/engine:{{ $slug }}-{{ .distro }}-{{ .type }}
+          - brightcodecompany/openintegrationengine:{{ $slug }}-{{ .distro }}
+          - brightcodecompany/openintegrationengine:{{ $slug }}-{{ .distro }}-{{ .type }}
           {{- if eq $slug $.latest }}
-          - openintegrationengine/engine:latest-{{ .distro }}-{{ .type }}
+          - brightcodecompany/openintegrationengine:latest-{{ .distro }}-{{ .type }}
             {{- if eq .type "jre" }}
-          - openintegrationengine/engine:latest-{{ .distro }}
+          - brightcodecompany/openintegrationengine:latest-{{ .distro }}
               {{- if eq .distro "alpine" }}
-          - openintegrationengine/engine:latest
+          - brightcodecompany/openintegrationengine:latest
               {{- end }}
             {{- end }}
           {{- end }}
