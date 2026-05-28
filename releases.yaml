@@ -20,19 +20,19 @@ labels: |-
   "org.opencontainers.image.version"="{{ .slug }}"
 
 versions:
-  - slug: 4.5.2-tp.1
+  - slug: 4.5.2
     releaseVersion: 4.5.2
-    releaseUrl: https://github.com/OpenIntegrationEngine/engine/releases/download/v4.5.2-tp.1/oie_unix_4_5_2.tar.gz
+    releaseUrl: https://github.com/OpenIntegrationEngine/engine/releases/download/v4.5.2/oie_unix_4_5_2.tar.gz
     tags:
       - distro: ubuntu
         type: jre
-        tag: 17.0.15_6-jre-noble
+        tag: 21.0.11_10-jre-resolute
       - distro: ubuntu
         type: jdk
-        tag: 17.0.15_6-jdk-noble
+        tag: 21.0.11_10-jdk-resolute
       - distro: alpine
         type: jre
-        tag: 17.0.15_6-jre-alpine
+        tag: 21.0.11_10-jre-alpine
       - distro: alpine
         type: jdk
-        tag: 17.0.15_6-jdk-alpine
+        tag: 21.0.11_10-jdk-alpine
