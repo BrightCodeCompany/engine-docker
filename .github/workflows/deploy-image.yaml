@@ -28,7 +28,7 @@ jobs:
         uses: docker/setup-compose-action@v2
 
       - name: Build images
-        working-directory: dockerfiles/{{ matrix.oie_version }}
+        working-directory: dockerfiles/${{ matrix.oie_version }}
         run: |
           docker compose --progress plain build --build-arg CREATED_AT=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
           docker image ls
