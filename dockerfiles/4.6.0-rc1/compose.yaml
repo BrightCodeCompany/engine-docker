@@ -16,8 +16,8 @@ services:
           - linux/amd64
           - linux/arm64
         tags:
-          - brightcodecompany/openintegrationengine:4.5.2-tp.1-ubuntu
-          - brightcodecompany/openintegrationengine:4.5.2-tp.1-ubuntu-jre
+          - brightcodecompany/openintegrationengine:4.6.0-rc1-ubuntu
+          - brightcodecompany/openintegrationengine:4.6.0-rc1-ubuntu-jre
   
     ubuntu-jdk:
       image: brightcodecompany/openintegrationengine
@@ -28,8 +28,8 @@ services:
           - linux/amd64
           - linux/arm64
         tags:
-          - brightcodecompany/openintegrationengine:4.5.2-tp.1-ubuntu
-          - brightcodecompany/openintegrationengine:4.5.2-tp.1-ubuntu-jdk
+          - brightcodecompany/openintegrationengine:4.6.0-rc1-ubuntu
+          - brightcodecompany/openintegrationengine:4.6.0-rc1-ubuntu-jdk
   
     alpine-jre:
       image: brightcodecompany/openintegrationengine
@@ -40,8 +40,8 @@ services:
           - linux/amd64
           - linux/arm64
         tags:
-          - brightcodecompany/openintegrationengine:4.5.2-tp.1-alpine
-          - brightcodecompany/openintegrationengine:4.5.2-tp.1-alpine-jre
+          - brightcodecompany/openintegrationengine:4.6.0-rc1-alpine
+          - brightcodecompany/openintegrationengine:4.6.0-rc1-alpine-jre
   
     alpine-jdk:
       image: brightcodecompany/openintegrationengine
@@ -52,6 +52,6 @@ services:
           - linux/amd64
           - linux/arm64
         tags:
-          - brightcodecompany/openintegrationengine:4.5.2-tp.1-alpine
-          - brightcodecompany/openintegrationengine:4.5.2-tp.1-alpine-jdk
+          - brightcodecompany/openintegrationengine:4.6.0-rc1-alpine
+          - brightcodecompany/openintegrationengine:4.6.0-rc1-alpine-jdk
   
