@@ -27,11 +27,12 @@
 
 - 🌐 **Website**: [openintegrationengine.org](https://openintegrationengine.org)
 - 💬 **Discord**: [Join our server](https://discord.gg/azdehW2Zrx)
-- 📂 **GitHub Repo**: [github.com/OpenIntegrationEngine/engine](https://github.com/OpenIntegrationEngine/engine)
+- 📂 **GitHub Repo**: [OpenIntegrationEngine/engine](https://github.com/OpenIntegrationEngine/engine)
 
 #### How to file issues:
 
-https://github.com/OpenIntegrationEngine/engine/issues
+Issues regarding the Open Integration Engine software are tracked on the [Open Integration Engine GitHub repository](https://github.com/OpenIntegrationEngine/engine/issues),
+whereas issues regarding the Docker images are tracked on the [BrightCodeCompany GitHub repository](https://github.com/BrightCodeCompany/engine-docker).
 
 Please do your best to include the following information in your issue:
 * The exact commit hash of the code you are using
@@ -88,7 +89,7 @@ All Open Integration Engine releases are packaged into the following images:
 
 Docker images for OIE 4.5.2 and later versions support both `linux/amd64` and `linux/arm64` architectures. As an example, to pull the latest `linux/arm64` image, use the command
 ```
-docker pull --platform linux/arm64 openintegrationengine/engine:latest
+docker pull --platform linux/arm64 brightcodecompany/openintegrationengine:latest
 ```
 
 ------------
@@ -103,25 +104,25 @@ Quickly start OpenIntegration using embedded Derby database and all configuratio
 the Administrator GUI or CLI:
 
 ```bash
-docker run -p 8443:8443 openintegrationengine/engine
+docker run -p 8443:8443 brightcodecompany/openintegrationengine
 ```
 
 You can also use the `--name` option to give your container a unique name, and the `-d` option to detach the container and run it in the background:
 
 ```bash
-docker run --name myengine -d -p 8443:8443 openintegrationengine/engine
+docker run --name myengine -d -p 8443:8443 brightcodecompany/openintegrationengine
 ```
 
 To run a different base image, specify a tag at the end:
 
 ```bash
-docker run --name myengine -d -p 8443:8443 openintegrationengine/engine:latest-alpine-jdk
+docker run --name myengine -d -p 8443:8443 brightcodecompany/openintegrationengine:latest-alpine-jdk
 ```
 
 To run using a specific architecture, specify it using the `--platform` argument:
 
 ```bash
-docker run --name myengine -d -p 8443:8443 --platform linux/arm64 openintegrationengine/engine
+docker run --name myengine -d -p 8443:8443 --platform linux/arm64 brightcodecompany/openintegrationengine
 ```
 
 Look at the [Environment Variables](#environment-variables) section for more available configuration options.
@@ -142,7 +143,7 @@ Here's an example `stack.yml` file you can use:
 ```yaml
 services:
   engine:
-    image: openintegrationengine/engine
+    image: brightcodecompany/openintegrationengine
     environment:
       - DATABASE=postgres
       - DATABASE_URL=jdbc:postgresql://db:5432/enginedb
@@ -182,7 +183,7 @@ You can use environment variables to configure the [mirth.properties](https://gi
 To set environment variables, use the `-e` option for each variable on the command line:
 
 ```bash
-docker run -e DATABASE='derby' -p 8443:8443 openintegrationengine/engine
+docker run -e DATABASE='derby' -p 8443:8443 brightcodecompany/openintegrationengine
 ```
 
 You can also use a separate file containing all of your environment variables using the `--env-file` option. For example let's say you create a file **myenvfile.txt**:
@@ -200,7 +201,7 @@ VMOPTIONS=-Xmx512m
 ```
 
 ```bash
-docker run --env-file=myenvfile.txt -p 8443:8443 openintegrationengine/engine
+docker run --env-file=myenvfile.txt -p 8443:8443 brightcodecompany/openintegrationengine
 ```
 
 ------------
@@ -366,7 +367,7 @@ Then in your `compose.yaml`:
 ```yaml
 services:
   engine:
-    image: openintegrationengine/engine
+    image: brightcodecompany/openintegrationengine
     environment:
       - VMOPTIONS=-Xmx512m
     secrets:
@@ -397,7 +398,7 @@ your server ID. If you are launching Engine as part of a stack/swarm, it's possi
 preserve the appdata folder.
 
 ```bash
-docker run -v /local/path/to/appdata:/opt/engine/appdata -p 8443:8443 openintegrationengine/engine
+docker run -v /local/path/to/appdata:/opt/engine/appdata -p 8443:8443 brightcodecompany/openintegrationengine
 ```
 
 The `-v` option makes a local directory from your filesystem available to the Docker container. Create a folder on your local filesystem, then change the `/local/path/to/appdata` part in the example
@@ -408,7 +409,7 @@ You can also configure volumes as part of your `compose.yaml`:
 ```yaml
 services:
   engine:
-    image: openintegrationengine/engine
+    image: brightcodecompany/openintegrationengine
     volumes:
       - ~/Documents/appdata:/opt/engine/appdata
 ```
@@ -422,7 +423,7 @@ The entrypoint script will automatically look for any `.zip` files in the `/opt/
 So to launch Engine with any additional extensions not included in the base application, do this:
 
 ```bash
-docker run -v /local/path/to/custom-extensions:/opt/engine/custom-extensions -p 8443:8443 openintegrationengine/engine:latest-ubuntu-jre
+docker run -v /local/path/to/custom-extensions:/opt/engine/custom-extensions -p 8443:8443 brightcodecompany/openintegrationengine:latest-ubuntu-jre
 ```
 
 Create a folder on your local filesystem containing the ZIP files for your additional extensions. Then change the `/local/path/to/custom-extensions` part in the example above to the correct local path.
