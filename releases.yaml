@@ -2,7 +2,7 @@
 latest: 4.5.2-tp.1
 
 # Sets the alpine image tag for the downloader stage
-downloaderTag: 3.21.3
+downloaderTag: 3.23.4
 
 uid: 1000
 gid: 1000
