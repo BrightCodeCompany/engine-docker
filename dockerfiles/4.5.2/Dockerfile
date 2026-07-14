@@ -8,7 +8,7 @@
 
 ARG CREATED_AT
 
-FROM alpine:3.23.4 AS downloader
+FROM alpine:3.24.1 AS downloader
 
 WORKDIR /opt
 
