@@ -33,14 +33,14 @@ FROM eclipse-temurin:21.0.11_10-jre-resolute AS ubuntu-jre
 ARG CREATED_AT
 
 LABEL \
-  "org.opencontainers.image.authors"="The Open Integration Engine Project and contributors" \
+  "org.opencontainers.image.authors"="BrightCodeCompany OÜ" \
   "org.opencontainers.image.created"="${CREATED_AT?:}" \
   "org.opencontainers.image.description"="An open source fork of the now closed-source Mirth Connect" \
   "org.opencontainers.image.licenses"="MPL-2.0" \
   "org.opencontainers.image.source"="https://github.com/brightcodecompany/engine-docker" \
   "org.opencontainers.image.title"="Open Integration Engine" \
   "org.opencontainers.image.url"="https://github.com/OpenIntegrationEngine/engine" \
-  "org.opencontainers.image.vendor"="The Open Integration Engine Project" \
+  "org.opencontainers.image.vendor"="BrightCodeCompany OÜ" \
   "org.opencontainers.image.version"="4.6.0-rc1"
 
 COPY --from=downloader --chown=1000:1000 /opt/engine /opt/engine
@@ -67,14 +67,14 @@ FROM eclipse-temurin:21.0.11_10-jdk-resolute AS ubuntu-jdk
 ARG CREATED_AT
 
 LABEL \
-  "org.opencontainers.image.authors"="The Open Integration Engine Project and contributors" \
+  "org.opencontainers.image.authors"="BrightCodeCompany OÜ" \
   "org.opencontainers.image.created"="${CREATED_AT?:}" \
   "org.opencontainers.image.description"="An open source fork of the now closed-source Mirth Connect" \
   "org.opencontainers.image.licenses"="MPL-2.0" \
   "org.opencontainers.image.source"="https://github.com/brightcodecompany/engine-docker" \
   "org.opencontainers.image.title"="Open Integration Engine" \
   "org.opencontainers.image.url"="https://github.com/OpenIntegrationEngine/engine" \
-  "org.opencontainers.image.vendor"="The Open Integration Engine Project" \
+  "org.opencontainers.image.vendor"="BrightCodeCompany OÜ" \
   "org.opencontainers.image.version"="4.6.0-rc1"
 
 COPY --from=downloader --chown=1000:1000 /opt/engine /opt/engine
@@ -101,14 +101,14 @@ FROM eclipse-temurin:21.0.11_10-jre-alpine AS alpine-jre
 ARG CREATED_AT
 
 LABEL \
-  "org.opencontainers.image.authors"="The Open Integration Engine Project and contributors" \
+  "org.opencontainers.image.authors"="BrightCodeCompany OÜ" \
   "org.opencontainers.image.created"="${CREATED_AT?:}" \
   "org.opencontainers.image.description"="An open source fork of the now closed-source Mirth Connect" \
   "org.opencontainers.image.licenses"="MPL-2.0" \
   "org.opencontainers.image.source"="https://github.com/brightcodecompany/engine-docker" \
   "org.opencontainers.image.title"="Open Integration Engine" \
   "org.opencontainers.image.url"="https://github.com/OpenIntegrationEngine/engine" \
-  "org.opencontainers.image.vendor"="The Open Integration Engine Project" \
+  "org.opencontainers.image.vendor"="BrightCodeCompany OÜ" \
   "org.opencontainers.image.version"="4.6.0-rc1"
 
 COPY --from=downloader --chown=1000:1000 /opt/engine /opt/engine
@@ -131,14 +131,14 @@ FROM eclipse-temurin:21.0.11_10-jdk-alpine AS alpine-jdk
 ARG CREATED_AT
 
 LABEL \
-  "org.opencontainers.image.authors"="The Open Integration Engine Project and contributors" \
+  "org.opencontainers.image.authors"="BrightCodeCompany OÜ" \
   "org.opencontainers.image.created"="${CREATED_AT?:}" \
   "org.opencontainers.image.description"="An open source fork of the now closed-source Mirth Connect" \
   "org.opencontainers.image.licenses"="MPL-2.0" \
   "org.opencontainers.image.source"="https://github.com/brightcodecompany/engine-docker" \
   "org.opencontainers.image.title"="Open Integration Engine" \
   "org.opencontainers.image.url"="https://github.com/OpenIntegrationEngine/engine" \
-  "org.opencontainers.image.vendor"="The Open Integration Engine Project" \
+  "org.opencontainers.image.vendor"="BrightCodeCompany OÜ" \
   "org.opencontainers.image.version"="4.6.0-rc1"
 
 COPY --from=downloader --chown=1000:1000 /opt/engine /opt/engine
