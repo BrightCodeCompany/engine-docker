@@ -1,0 +1,64 @@
+################################################################
+#                                                              #
+#  WARNING: THIS FILE IS AUTO-GENERATED. DO NOT EDIT MANUALLY  #
+#                                                              #
+################################################################
+
+name: open-integration-engine
+
+services:
+    ubuntu-jre:
+      image: brightcodecompany/openintegrationengine
+      build:
+        target: ubuntu-jre
+        context: .
+        platforms:
+          - linux/amd64
+          - linux/arm64
+        tags:
+          - brightcodecompany/openintegrationengine:4.6.0-ubuntu
+          - brightcodecompany/openintegrationengine:4.6.0-ubuntu-jre
+          - brightcodecompany/openintegrationengine:latest-ubuntu-jre
+          - brightcodecompany/openintegrationengine:latest-ubuntu
+  
+    ubuntu-jdk:
+      image: brightcodecompany/openintegrationengine
+      build:
+        target: ubuntu-jdk
+        context: .
+        platforms:
+          - linux/amd64
+          - linux/arm64
+        tags:
+          - brightcodecompany/openintegrationengine:4.6.0-ubuntu
+          - brightcodecompany/openintegrationengine:4.6.0-ubuntu-jdk
+          - brightcodecompany/openintegrationengine:latest-ubuntu-jdk
+  
+    alpine-jre:
+      image: brightcodecompany/openintegrationengine
+      build:
+        target: alpine-jre
+        context: .
+        platforms:
+          - linux/amd64
+          - linux/arm64
+        tags:
+          - brightcodecompany/openintegrationengine:4.6.0-alpine
+          - brightcodecompany/openintegrationengine:4.6.0-alpine-jre
+          - brightcodecompany/openintegrationengine:latest-alpine-jre
+          - brightcodecompany/openintegrationengine:latest-alpine
+          - brightcodecompany/openintegrationengine:latest
+  
+    alpine-jdk:
+      image: brightcodecompany/openintegrationengine
+      build:
+        target: alpine-jdk
+        context: .
+        platforms:
+          - linux/amd64
+          - linux/arm64
+        tags:
+          - brightcodecompany/openintegrationengine:4.6.0-alpine
+          - brightcodecompany/openintegrationengine:4.6.0-alpine-jdk
+          - brightcodecompany/openintegrationengine:latest-alpine-jdk
+  

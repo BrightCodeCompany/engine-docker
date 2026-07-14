@@ -20,6 +20,23 @@ labels: |-
   "org.opencontainers.image.version"="{{ .slug }}"
 
 versions:
+  - slug: 4.6.0
+    releaseVersion: 4.6.0
+    releaseUrl: https://github.com/OpenIntegrationEngine/engine/releases/download/v4.6.0/oie_unix_4_6_0.tar.gz
+    tags:
+      - distro: ubuntu
+        type: jre
+        tag: 21.0.11_10-jre-resolute
+      - distro: ubuntu
+        type: jdk
+        tag: 21.0.11_10-jdk-resolute
+      - distro: alpine
+        type: jre
+        tag: 21.0.11_10-jre-alpine
+      - distro: alpine
+        type: jdk
+        tag: 21.0.11_10-jdk-alpine
+
   - slug: 4.6.0-rc1
     releaseVersion: 4.6.0-rc1
     releaseUrl: https://github.com/OpenIntegrationEngine/engine/releases/download/v4.6.0-rc1/oie_unix_4_6_0-rc1.tar.gz
