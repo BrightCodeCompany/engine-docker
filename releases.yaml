@@ -1,5 +1,5 @@
 # Specifies which slug should gain the "latest" tags
-latest: 4.5.2
+latest: 4.6.0
 
 # Sets the alpine image tag for the downloader stage
 downloaderTag: 3.24.1

@@ -18,8 +18,6 @@ services:
         tags:
           - brightcodecompany/openintegrationengine:4.5.2-ubuntu
           - brightcodecompany/openintegrationengine:4.5.2-ubuntu-jre
-          - brightcodecompany/openintegrationengine:latest-ubuntu-jre
-          - brightcodecompany/openintegrationengine:latest-ubuntu
   
     ubuntu-jdk:
       image: brightcodecompany/openintegrationengine
@@ -32,7 +30,6 @@ services:
         tags:
           - brightcodecompany/openintegrationengine:4.5.2-ubuntu
           - brightcodecompany/openintegrationengine:4.5.2-ubuntu-jdk
-          - brightcodecompany/openintegrationengine:latest-ubuntu-jdk
   
     alpine-jre:
       image: brightcodecompany/openintegrationengine
@@ -45,9 +42,6 @@ services:
         tags:
           - brightcodecompany/openintegrationengine:4.5.2-alpine
           - brightcodecompany/openintegrationengine:4.5.2-alpine-jre
-          - brightcodecompany/openintegrationengine:latest-alpine-jre
-          - brightcodecompany/openintegrationengine:latest-alpine
-          - brightcodecompany/openintegrationengine:latest
   
     alpine-jdk:
       image: brightcodecompany/openintegrationengine
@@ -60,5 +54,4 @@ services:
         tags:
           - brightcodecompany/openintegrationengine:4.5.2-alpine
           - brightcodecompany/openintegrationengine:4.5.2-alpine-jdk
-          - brightcodecompany/openintegrationengine:latest-alpine-jdk
   
